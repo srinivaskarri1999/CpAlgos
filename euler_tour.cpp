@@ -1,15 +1,15 @@
 //st[i] ==> starting index of subtree of node i in base array
 //en[i] ==> ending index of subtree of node i in base array
-int st[N], en[N], base[N], time=0;
+int st[N], en[N], base[N], tim=0;
 
 void dfs(int u, int pa) {
-    base[time] = u;
-    st[u] = time++;
+    base[tim] = u;
+    st[u] = tim++;
 
     for(auto it:G[u]) {
         if(it==pa) 
             continue;
         dfs(it, u);
     }
-    en[u] = time-1;
+    en[u] = tim-1;
 }
