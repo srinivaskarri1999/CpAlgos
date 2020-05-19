@@ -1,15 +1,13 @@
 struct tt{
     int siz;
     ll mat[6][6];
-    tt(int r){
+    tt(int r = 6){
         siz=r;
         ifr(i,0,siz)
             ifr(j,0,siz)
                 mat[i][j]=0;
     }
-    int size() {
-        return siz;
-    }
+    int size() { return siz; }
 };
 
 // void print(tt &x){
