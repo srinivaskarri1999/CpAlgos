@@ -8,7 +8,7 @@ void pre_dfs(int u,int p=-1) {
     pa[u][0] = p;
     ifr(i, 1, 18) pa[u][i] = ~pa[u][i-1]?pa[pa[u][i-1]][i-1]:-1;
     for(int ch:G[u])
-        if(ch != par) {
+        if(ch != p) {
             d[ch] = d[u]+1;
             pre_dfs(ch, u);
         }
