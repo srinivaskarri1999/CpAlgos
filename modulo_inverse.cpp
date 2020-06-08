@@ -1,4 +1,4 @@
 //modulo inverse
-
-ifac[1] = 1; 
-ifr(i, 2, N) ifac[i] = (mod - (mod/i) * ifac[mod%i] % mod) % mod;
+// inv[i] is inverse of i
+inv[1] = 1; 
+ifr(i, 2, N) inv[i] = (mod - (mod/i) * inv[mod%i] % mod) % mod;
