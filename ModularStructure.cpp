@@ -24,7 +24,7 @@ struct Modular {
   friend Modular operator-(Modular const a) { return 0 - a; }
   friend Modular operator*(Modular a, Modular const b) { return a *= b; }
   friend Modular operator/(Modular a, Modular const b) { return a /= b; }
-  friend std::ostream& operator<<(std::ostream& os, Modular const& a) {return os << a.value;}
+  friend std::ostream& operator<<(std::ostream& ostr, Modular const& a) {return ostr << a.value;}
   friend bool operator==(Modular const& a, Modular const& b) {return a.value == b.value;}
   friend bool operator!=(Modular const& a, Modular const& b) {return a.value != b.value;}
 };
