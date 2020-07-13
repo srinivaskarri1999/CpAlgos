@@ -52,7 +52,7 @@ vector<int> lcpCon(string const &s, vector<int> const &p) {
     ifr(i,0,n) has[p[i]] = i;
     int k = 0,j;
     vector<int> lcp(n-1,0);
-    ifr(i,0,n-1) {
+    ifr(i, 0, n) {
         if(has[i]==n-1) {
             k = 0;
             continue;
