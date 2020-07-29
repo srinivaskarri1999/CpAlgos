@@ -71,7 +71,7 @@ struct segtree {
         else
             return pquery(mid+1, r, ind, 2*pos+2);
     } 
-    void update(int l,int r,int s,int e,T1 val,int pos) {
+    void update(int l,int r,int s,int e,T1 &val,int pos) {
         if(clazy[pos])
             propagate(l, r, pos);
         if(r<s || e<l)
@@ -88,7 +88,7 @@ struct segtree {
         update(mid+1, r, s, e, val, 2 * pos + 2);
         merge(tree[pos], tree[2*pos + 1], tree[2*pos+2]);
     }
-    void pupdate(int l,int r,int ind,T1 val,int pos) {
+    void pupdate(int l,int r,int ind,T1 &val,int pos) {
         if(clazy[pos])
             propagate(l, r, pos);
         if(l==r) {
